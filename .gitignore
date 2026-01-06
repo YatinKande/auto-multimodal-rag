@@ -1,0 +1,64 @@
+# -------------------------
+# Secrets / environment
+# -------------------------
+.env
+.env.*
+!.env.example
+
+# -------------------------
+# Python virtual envs
+# -------------------------
+.venv/
+venv/
+ENV/
+env/
+
+# -------------------------
+# Python cache / build
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+*.log
+
+# -------------------------
+# OS / editor junk
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# -------------------------
+# Data + generated artifacts (your project folders)
+# -------------------------
+data/uploads/
+data/faiss_index/
+
+# If you generate indexes elsewhere, also ignore:
+**/faiss_index/
+**/index/
+**/*.faiss
+**/*.pkl
+
+# -------------------------
+# Frontend build artifacts (if you add bundlers later)
+# -------------------------
+node_modules/
+dist/
+build/
+.cache/
+
+# -------------------------
+# Jupyter (if you ever add notebooks)
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# Optional: ignore local run scripts output
+# -------------------------
+*.pid

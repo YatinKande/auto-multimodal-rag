@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+pypdf
+python-docx
+python-pptx
+pandas
+sentence-transformers
+faiss-cpu
+ollama
+google-generativeai
+pillow
+numpy
+pytest
+python-dotenv
