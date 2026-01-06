@@ -1,6 +1,12 @@
 # AutoRAG Diagnostic Assistant
 
-**AutoRAG Diagnostic Assistant** is an AI-powered tool designed for the automotive industry. It allows users to upload technical documents (PDFs, Manuals) and Images (wiring diagrams, OBD screenshots), extracts the information, and lets you chat with it to diagnose vehicle issues.
+**AutoRAG Diagnostic Assistant** is an advanced AI-powered tool designed for automotive technicians and DIY enthusiasts. It bridges the gap between static technical documents and active diagnostics. By uploading service manuals (PDF), wiring diagrams, and real-time scanner screenshots (Images), users can interact with a "Hybrid" AI brain to troubleshoot complex vehicle faults.
+
+It uniquely combines **Ollama (Local Vision AI)** for secure, private image analysis with **Google Gemini (Cloud AI)** for high-reasoning text generation, ensuring accurate diagnostic advice even when offline tools are needed.
+
+![Diagnostic Console](images/chat_interface.png)
+
+*Above: The AutoRAG interface showing a "Hybrid" RAG response. The system analyzes an uploaded image of an OBD-II setup using local vision AI (Llama 3.2), extracts the diagnostic context, and provides a structured answer citing the source image.*
 
 ## Key Features
 - **Multi-Format Support:** Reads PDF, DOCX, CSV, and Images.
