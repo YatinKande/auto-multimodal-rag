@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoRAG Diagnostic Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar: Uploads & Status -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fas fa-car-battery"></i>
+                <span>AutoRAG <small>Diags</small></span>
+            </div>
+
+            <div class="upload-section">
+                <h3><i class="fas fa-file-upload"></i> Ingest Documents</h3>
+                <div class="drop-zone" id="drop-zone">
+                    <p>Drag files or Click</p>
+                    <input type="file" id="file-input" multiple hidden>
+                </div>
+                <div id="upload-status"></div>
+            </div>
+
+            <div class="files-list-section">
+                <h3><i class="fas fa-server"></i> Indexed Data</h3>
+                <ul id="file-list">
+                    <!-- List items will be injected here -->
+                    <li><small>No files loaded.</small></li>
+                </ul>
+            </div>
+
+            <div class="system-status">
+                <div class="status-item" id="api-status">
+                    <span class="indicator"></span> Backend: Checking...
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-interface">
+            <header class="chat-header">
+                <h2>Diagnostic Console</h2>
+                <div class="mode-toggles">
+                    <span class="capsule active">RAG MODE</span>
+                    <span class="capsule">HYBRID</span>
+                </div>
+            </header>
+
+            <div class="chat-history" id="chat-history">
+                <div class="message system">
+                    <div class="avatar"><i class="fas fa-robot"></i></div>
+                    <div class="content">
+                        <p>System Online. Identify vehicle model or upload diagnostic manuals to begin analysis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea id="user-input" placeholder="Describe symptoms or ask about specific codes..."
+                        rows="1"></textarea>
+                    <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <p class="disclaimer">AI-generated diagnostic advice. Verify with certified mechanics.</p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
